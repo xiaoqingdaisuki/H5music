@@ -1,0 +1,80 @@
+.home {
+  width: 100%;
+  position: absolute;
+  top: 45px;
+  bottom: 50px;
+  overflow-y: auto;
+}
+
+.btnList {
+  padding: 10px 0;
+  border-bottom: 1px solid rgb(235,235,235);
+  .btnItem {
+    width: 100%;
+    text-align: center;
+    .btnBox {
+      margin: 0 auto;
+      width: 48px;
+      height: 48px;
+      background: #F6AD49;
+      border-radius: 60px;
+      border: 1px solid rgba(235,235,235,0.4);
+    }
+    .btnIcon {
+      margin-top: 10px;
+      width: 24px;
+      height: 24px;
+    }
+    .btnText {
+      width: 100%;
+      margin-top: 5px;
+    }
+  }
+}
+
+.recommend {
+  margin-top: 20px;
+}
+.recommendTitle {
+  margin-bottom: 10px;
+}
+.recommendText {
+  font-size: 18px;
+  display: table-cell;
+  vertical-align: middle;
+  margin-bottom: 10px;
+}
+.recommendIcon {
+  position: relative;
+  top: 2px;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.new {
+  margin-top: 20px;
+}
+.newTitle {
+  margin-bottom: 10px;
+}
+.newText {
+  font-size: 18px;
+  display: table-cell;
+  vertical-align: middle;
+}
+.newIcon {
+  position: relative;
+  top: 2px;
+  display: table-cell;
+  vertical-align: middle;
+}
+/* 重写antd-mobile */
+.slider-frame {
+  border-radius: 5px;
+}
+.am-grid-item-content {
+  background: rgb(245, 245, 249);
+}
+.am-grid .am-flexbox .am-flexbox-item .am-grid-item-content {
+  padding: 0;
+}

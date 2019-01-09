@@ -1,0 +1,16 @@
+.my {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 45px;
+  bottom: 50px;
+  overflow: auto;
+}
+
+.flex {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  vertical-align: middle;
+  justify-items: center;
+}
