@@ -21,7 +21,6 @@ class Footer extends Component {
   // 修改导航栏状态
   router(e) {
     this.props.onSwitchNav(e);
-
     if (e === 1) {
       this.context.router.history.push('/')
     } else if (e === 2) {

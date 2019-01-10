@@ -12,7 +12,6 @@ export default class Header extends Component {
 
   render() {
     const { nav } = this.props // 导航栏
-
     return (
       <div className="header">
         <div style={nav === 1 ? {display: 'block'} : {display: 'none'}}>
