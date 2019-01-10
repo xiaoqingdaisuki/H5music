@@ -1,9 +1,30 @@
 .home {
   width: 100%;
-  position: absolute;
+  position: relative;
   top: 45px;
   bottom: 50px;
   overflow-y: auto;
+}
+
+.pull {
+  background: #FFF;
+  z-index: 1;
+  margin-bottom: 50px;
+  .in {
+    height: 300px;
+    background: #F6AD49;
+    position: absolute;
+    top: -130px;
+    width: 100%;
+    z-index: 0;
+  }
+}
+
+.carouselBox {
+  width: 100%;
+  position: relative;
+  top: 0px;
+  left: 0;
 }
 
 .btnList {
@@ -73,7 +94,7 @@
   border-radius: 5px;
 }
 .am-grid-item-content {
-  background: rgb(245, 245, 249);
+  background: #FFF;
 }
 .am-grid .am-flexbox .am-flexbox-item .am-grid-item-content {
   padding: 0;

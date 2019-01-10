@@ -7,10 +7,22 @@
   overflow: auto;
 }
 
-.flex {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  vertical-align: middle;
-  justify-items: center;
+.userCard {
+
+}
+
+.userList {
+  margin-top: 10px;
+}
+
+.userFunction {
+  margin-top: 10px;
+}
+
+.exit {
+  margin-top: 10px;
+}
+.exit .am-list-item .am-list-line .am-list-content {
+  text-align: center;
+  color: #F6AD49;
 }

@@ -1,34 +1,32 @@
 import React, { Component } from 'react';
-import { NavBar, Icon, SearchBar } from 'antd-mobile';
+import { NavBar, SearchBar } from 'antd-mobile';
 import './header.scss';
 
 export default class Header extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      navState: 1,
+      value: '',
     };
-
-    this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick() {
-
-  }
-  
   render() {
+    const { nav } = this.props // 导航栏
+
     return (
       <div className="header">
-        <div style={this.state.navState === 1 ? {display: 'block'} : {display: 'none'}}>
+        <div style={nav === 1 ? {display: 'block'} : {display: 'none'}}>
+          <img className="listImg" src={require('./../assets/images/播放列表.png')} alt="播放列表" />
           <SearchBar className="search" placeholder="Search" maxLength={20} /> 
         </div>
-        <div style={this.state.navState === 1 ? {display: 'none'} : {display: 'block'}}>
-        <NavBar className="title" mode="light" icon={<Icon type="left" />} onLeftClick={() => console.log('onLeftClick')}
-          rightContent={[
-            <Icon key="0" type="search" style={{ marginRight: '16px' }} />,
-            <Icon key="1" type="ellipsis" />,]
-          }>
-          NavBar
+        <div style={nav === 1 ? {display: 'none'} : {display: 'block'}}>
+        <NavBar 
+          className="title" 
+          mode="light" 
+          icon={<img className="listImg" src={require('./../assets/images/播放列表.png')} alt="播放列表" />} 
+          onLeftClick={() => console.log('onLeftClick')}
+        >
+          {nav === 2 ? "我的音乐" : "帐号"}
         </NavBar>
         </div>
       </div>
