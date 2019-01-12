@@ -68,14 +68,14 @@ class Account extends Component {
                 arrow="horizontal"
                 onClick={() => {}}
               >
-                换肤
+                关于
               </Item>
               <Item
                 thumb="https://zos.alipayobjects.com/rmsportal/dNuvNrtqUztHCwM.png"
                 arrow="horizontal"
                 onClick={() => {}}
               >
-                关于
+                作者：github.com/xiaoqingdaisuki
               </Item>
             </List>
           </div>

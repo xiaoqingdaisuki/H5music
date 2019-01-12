@@ -3,6 +3,11 @@ import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-d
 import home from "./../page/home";
 import my from "./../page/my";
 import account from "./../page/account";
+import play from "./../page/play";
+import fm from "./../page/fm";
+import musicList from "./../page/musicList";
+import rankList from "./../page/rankList";
+import today from "./../page/today";
 
 // 异步加载举例 本项目暂无使用
 // const balance = asyncComponent(() => import("@/pages/balance/balance"));
@@ -17,6 +22,11 @@ export default class router extends Component {
           <Route exact path="/" component={home} />
           <Route path="/my" component={my} />
           <Route path="/account" component={account} />
+          <Route path="/play" component={play} />
+          <Route path="/fm" component={fm} />
+          <Route path="/musicList" component={musicList} />
+          <Route path="/rankList" component={rankList} />
+          <Route path="/today" component={today} />
           <Redirect to="/" />
         </Switch>
       </Router>

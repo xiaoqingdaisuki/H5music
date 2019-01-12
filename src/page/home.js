@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import { WingBlank, Flex, Grid, Carousel, Icon, PullToRefresh } from 'antd-mobile';
 import './home.scss';
 import Header from './../component/header';
@@ -10,7 +11,7 @@ class Home extends Component {
     this.state = {
       data: ['1', '2', '3'],
       imgHeight: 176,
-      navState: 1
+      navState: 1,
     };
 
     this.switchNav = this.switchNav.bind(this);
@@ -46,7 +47,7 @@ class Home extends Component {
         <div className="pull">
           <PullToRefresh
             damping={100}
-            distanceToRefresh={40}
+            distanceToRefresh={30}
             ref={el => this.ptr = el}
             style={{
               height: this.state.height,
@@ -90,36 +91,44 @@ class Home extends Component {
               <div className="btnList">
                 <Flex>
                   <Flex.Item>
-                    <div className="btnItem">
-                      <div className="btnBox">
-                        <img className="btnIcon" src={require("./../assets/images/radio.png")} alt="please reflash page"></img>
+                    <Link to="/fm">
+                      <div className="btnItem">
+                        <div className="btnBox">
+                          <img className="btnIcon" src={require("./../assets/images/radio.png")} alt="please reflash page"></img>
+                        </div>
+                        <p className="btnText">私人电台</p>
                       </div>
-                      <p className="btnText">私人电台</p>
-                    </div>
+                    </Link>
                   </Flex.Item>
                   <Flex.Item>
-                    <div className="btnItem">
-                      <div className="btnBox">
-                        <img className="btnIcon" src={require("./../assets/images/每日推荐-01.png")} alt="please reflash page"></img>
+                    <Link to="/today">
+                      <div className="btnItem">
+                        <div className="btnBox">
+                          <img className="btnIcon" src={require("./../assets/images/每日推荐-01.png")} alt="please reflash page"></img>
+                        </div>
+                        <p className="btnText">每日推荐</p>
                       </div>
-                      <p className="btnText">每日推荐</p>
-                    </div>
+                    </Link>
                   </Flex.Item>
                   <Flex.Item>
-                    <div className="btnItem">
-                      <div className="btnBox">
-                        <img className="btnIcon" src={require("./../assets/images/16.png")} alt="please reflash page"></img>
+                    <Link to="/musicList">
+                      <div className="btnItem">
+                        <div className="btnBox">
+                          <img className="btnIcon" src={require("./../assets/images/16.png")} alt="please reflash page"></img>
+                        </div>
+                        <p className="btnText">歌单</p>
                       </div>
-                      <p className="btnText">歌单</p>
-                    </div>
-                  </Flex.Item>              
+                    </Link>
+                  </Flex.Item>        
                   <Flex.Item>
-                    <div className="btnItem">
-                      <div className="btnBox">
-                        <img className="btnIcon" src={require("./../assets/images/排行榜.png")} alt="please reflash page"></img>
+                    <Link to="/rankList">  
+                      <div className="btnItem">
+                        <div className="btnBox">
+                          <img className="btnIcon" src={require("./../assets/images/排行榜.png")} alt="please reflash page"></img>
+                        </div>
+                        <p className="btnText">排行榜</p>
                       </div>
-                      <p className="btnText">排行榜</p>
-                    </div>
+                    </Link>
                   </Flex.Item>
                 </Flex>
               </div>

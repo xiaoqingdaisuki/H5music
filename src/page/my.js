@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import { List } from 'antd-mobile';
 import './my.scss';
 import Header from './../component/header';
@@ -31,57 +32,71 @@ class My extends Component {
         <Footer selected={nav} onSwitchNav={this.switchNav} />
         <div className="musicList">
           <List>
-            <Item
-              thumb="https://zos.alipayobjects.com/rmsportal/dNuvNrtqUztHCwM.png"
-              arrow="horizontal"
-              onClick={() => {}}
-            >
-              本地音乐
-            </Item>
-            <Item
-              thumb="https://zos.alipayobjects.com/rmsportal/dNuvNrtqUztHCwM.png"
-              arrow="horizontal"
-              onClick={() => {}}
-            >
-              最近播放
-            </Item>
-            <Item
-              thumb="https://zos.alipayobjects.com/rmsportal/dNuvNrtqUztHCwM.png"
-              arrow="horizontal"
-              onClick={() => {}}
-            >
-              我的收藏
-            </Item>
+            <Link to="/fm">
+              <Item
+                thumb="https://zos.alipayobjects.com/rmsportal/dNuvNrtqUztHCwM.png"
+                arrow="horizontal"
+                onClick={ () => {}}
+              >
+                最近播放
+              </Item>
+            </Link>
+            <Link to="/fm">
+              <Item
+                thumb="https://zos.alipayobjects.com/rmsportal/dNuvNrtqUztHCwM.png"
+                arrow="horizontal"
+                onClick={ () => {}}
+              >
+                私人电台
+              </Item>
+            </Link>
+            <Link to="/today">
+              <Item
+                thumb="https://zos.alipayobjects.com/rmsportal/dNuvNrtqUztHCwM.png"
+                arrow="horizontal"
+                onClick={ () => {}}
+              >
+                每日推荐
+              </Item>
+            </Link>
+            <Link to="/musicList">
+              <Item
+                thumb="https://zos.alipayobjects.com/rmsportal/dNuvNrtqUztHCwM.png"
+                arrow="horizontal"
+                onClick={ () => {}}
+              >
+                歌单
+              </Item>
+            </Link>
+            <Link to="/rankList">
+              <Item
+                thumb="https://zos.alipayobjects.com/rmsportal/dNuvNrtqUztHCwM.png"
+                arrow="horizontal"
+                onClick={ () => {}}
+              >
+                排行榜
+              </Item>
+            </Link>
           </List>
           <List renderHeader={() => '我的歌单'}>
-            <Item
-              thumb="https://zos.alipayobjects.com/rmsportal/dNuvNrtqUztHCwM.png"
-              arrow="horizontal"
-              onClick={() => {}}
-            >
-              我的歌单
-            </Item>
-            <Item
-              thumb="https://zos.alipayobjects.com/rmsportal/dNuvNrtqUztHCwM.png"
-              arrow="horizontal"
-              onClick={() => {}}
-            >
-              我的歌单2
-            </Item>
-            <Item
-              thumb="https://zos.alipayobjects.com/rmsportal/dNuvNrtqUztHCwM.png"
-              arrow="horizontal"
-              onClick={() => {}}
-            >
-              我的歌单3
-            </Item>
-            <Item
-              thumb="https://zos.alipayobjects.com/rmsportal/UmbJMbWOejVOpxe.png"
-              onClick={() => {}}
-              arrow="horizontal"
-            >
-              我的歌单4
-            </Item>
+            <Link to="/musicList">
+              <Item
+                thumb="https://zos.alipayobjects.com/rmsportal/dNuvNrtqUztHCwM.png"
+                arrow="horizontal"
+                onClick={ () => {}}
+              >
+                我的歌单
+              </Item>
+            </Link>
+            <Link to="/musicList">
+              <Item
+                thumb="https://zos.alipayobjects.com/rmsportal/dNuvNrtqUztHCwM.png"
+                arrow="horizontal"
+                onClick={ () => {}}
+              >
+                我的歌单2
+              </Item>
+            </Link>
           </List>
         </div>
       </div>
